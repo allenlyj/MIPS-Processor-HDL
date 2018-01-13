@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\MIPS_TEACH\//nimabi -x xcf32p -ver 0 E:/MB_test/led_test.bit 
+
+PROM E:\MIPS_TEACH\nimabi.prm map: Sun Nov 15 00:34:45 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 27e6b312
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0017:f32f     Nov 13 21:32:39 2015 E:/MB_test/led_test.bit

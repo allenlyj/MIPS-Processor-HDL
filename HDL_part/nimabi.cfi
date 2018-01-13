@@ -1,0 +1,12 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            11/15/2015 - 00:34
+SOURCE          E:\MIPS_TEACH\nimabi.mcs
+DEVICE          XCF32P
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x27E6B312
+BLOCK 0 VERSION 0 0x0806B312
+BLOCK 1 VERSION 0 END 0x0806B312

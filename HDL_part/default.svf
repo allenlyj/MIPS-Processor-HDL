@@ -1,0 +1,52 @@
+// Created using Xilinx Cse Software [ISE - 14.7]
+// Date: Sun Nov 15 18:08:09 2015
+
+TRST OFF;
+ENDIR IDLE;
+ENDDR IDLE;
+STATE RESET;
+STATE IDLE;
+FREQUENCY 1E6 HZ;
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+TIR 4 TDI (0f) SMASK (0f) ;
+HIR 0 ;
+HDR 0 ;
+TDR 1 TDI (00) SMASK (01) ;
+//Loading device with 'idcode' instruction.
+SIR 6 TDI (09) SMASK (3f) ;
+SDR 32 TDI (00000000) SMASK (ffffffff) TDO (f3727093) MASK (0fffffff) ;
+//Boundary Scan Chain Contents
+//Position 1: zynq7000_arm_dap
+//Position 2: xc7z020
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+TIR 4 TDI (0f) SMASK (0f) ;
+HIR 0 ;
+HDR 0 ;
+TDR 1 TDI (00) SMASK (01) ;
+//Loading device with 'idcode' instruction.
+SIR 6 TDI (09) ;
+SDR 32 TDI (00000000) TDO (f3727093) ;
+//Loading device with 'bypass' instruction.
+SIR 6 TDI (3f) ;
+//Loading device with 'bypass' instruction.
+SIR 6 TDI (3f) ;
+TIR 0 ;
+HIR 6 TDI (3f) SMASK (3f) ;
+HDR 1 TDI (00) SMASK (01) ;
+TDR 0 ;
+TIR 0 ;
+HIR 0 ;
+TDR 0 ;
+HDR 0 ;
+SIR 10 TDI (03ff) SMASK (03ff) ;
+SDR 2 TDI (00) SMASK (03) ;

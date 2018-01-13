@@ -1,0 +1,29 @@
+NET "clock" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVCMOS33;
+NET "pause" IOSTANDARD = LVCMOS33;
+NET "probe[7]" IOSTANDARD = LVCMOS33;
+NET "probe[6]" IOSTANDARD = LVCMOS33;
+NET "probe[5]" IOSTANDARD = LVCMOS33;
+NET "probe[4]" IOSTANDARD = LVCMOS33;
+NET "probe[3]" IOSTANDARD = LVCMOS33;
+NET "probe[2]" IOSTANDARD = LVCMOS33;
+NET "probe[1]" IOSTANDARD = LVCMOS33;
+NET "probe[0]" IOSTANDARD = LVCMOS33;
+
+
+
+NET "clock" LOC = Y9;
+NET "probe[7]" LOC = U14;
+NET "probe[6]" LOC = U19;
+NET "probe[3]" LOC = U21;
+NET "probe[2]" LOC = U22;
+NET "probe[1]" LOC = T21;
+NET "probe[0]" LOC = T22;
+NET "probe[5]" LOC = W22;
+NET "probe[4]" LOC = V22;
+NET "pause" LOC = T18;
+
+NET "reset" LOC = P16;
+#Created by Constraints Editor (xc7z020-clg484-1) - 2015/11/15
+NET "clock" TNM_NET = clock;
+TIMESPEC TS_clock = PERIOD "clock" 10 ns HIGH 50%;

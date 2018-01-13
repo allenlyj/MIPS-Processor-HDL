@@ -1,0 +1,13 @@
+Storage Target: SPI Flash Single FPGA
+Auto Select Storage Device
+FF
+zynq_spi_test
+E:/MIPS_TEACH
+
+MCS
+MIPS_TEACH\
+
+MCS
+Yes
+1
+No

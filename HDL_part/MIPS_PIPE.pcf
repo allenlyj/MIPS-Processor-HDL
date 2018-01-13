@@ -1,0 +1,242 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jan 12 22:42:29 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset" LOCATE = SITE "P16" LEVEL 1;
+COMP "pause" LOCATE = SITE "T18" LEVEL 1;
+COMP "clock" LOCATE = SITE "Y9" LEVEL 1;
+COMP "probe<4>" LOCATE = SITE "V22" LEVEL 1;
+COMP "probe<3>" LOCATE = SITE "U21" LEVEL 1;
+COMP "probe<2>" LOCATE = SITE "U22" LEVEL 1;
+COMP "probe<1>" LOCATE = SITE "T21" LEVEL 1;
+COMP "probe<0>" LOCATE = SITE "T22" LEVEL 1;
+COMP "probe<7>" LOCATE = SITE "U14" LEVEL 1;
+COMP "probe<6>" LOCATE = SITE "U19" LEVEL 1;
+COMP "probe<5>" LOCATE = SITE "W22" LEVEL 1;
+PIN
+        instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+PIN
+        data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+TIMEGRP clock = BEL "pc_current_2" BEL "pc_current_3" BEL "pc_current_4" BEL
+        "pc_current_5" BEL "pc_current_6" BEL "pc_current_7" BEL
+        "pc_current_8" BEL "pc_current_9" BEL "pc_current_10" BEL
+        "pc_current_11" BEL "pc_current_12" BEL "pc_current_13" BEL
+        "pc_current_14" BEL "pc_current_15" BEL "pc_current_16" BEL
+        "pc_current_17" BEL "pc_current_18" BEL "pc_current_19" BEL
+        "pc_current_20" BEL "pc_current_21" BEL "pc_current_22" BEL
+        "pc_current_23" BEL "pc_current_24" BEL "pc_current_25" BEL
+        "pc_current_26" BEL "pc_current_27" BEL "pc_current_28" BEL
+        "pc_current_29" BEL "pc_current_30" BEL "pc_current_31" BEL
+        "instruction_in_0" BEL "instruction_in_1" BEL "instruction_in_2" BEL
+        "instruction_in_3" BEL "instruction_in_4" BEL "instruction_in_5" BEL
+        "instruction_in_6" BEL "instruction_in_7" BEL "instruction_in_8" BEL
+        "instruction_in_9" BEL "instruction_in_10" BEL "instruction_in_11" BEL
+        "instruction_in_12" BEL "instruction_in_13" BEL "instruction_in_14"
+        BEL "instruction_in_15" BEL "instruction_in_16" BEL
+        "instruction_in_17" BEL "instruction_in_18" BEL "instruction_in_19"
+        BEL "instruction_in_20" BEL "instruction_in_21" BEL
+        "instruction_in_22" BEL "instruction_in_23" BEL "instruction_in_24"
+        BEL "instruction_in_25" BEL "instruction_in_26" BEL
+        "instruction_in_27" BEL "instruction_in_28" BEL "instruction_in_29"
+        BEL "instruction_in_30" BEL "instruction_in_31" BEL "imm_ext_ALU_0"
+        BEL "imm_ext_ALU_1" BEL "imm_ext_ALU_2" BEL "imm_ext_ALU_3" BEL
+        "imm_ext_ALU_4" BEL "imm_ext_ALU_5" BEL "imm_ext_ALU_6" BEL
+        "imm_ext_ALU_7" BEL "imm_ext_ALU_8" BEL "imm_ext_ALU_9" BEL
+        "imm_ext_ALU_10" BEL "imm_ext_ALU_11" BEL "imm_ext_ALU_12" BEL
+        "imm_ext_ALU_13" BEL "imm_ext_ALU_14" BEL "imm_ext_ALU_15" BEL
+        "imm_ext_ALU_16" BEL "reg_op1_ALU_0" BEL "reg_op1_ALU_1" BEL
+        "reg_op1_ALU_2" BEL "reg_op1_ALU_3" BEL "reg_op1_ALU_4" BEL
+        "reg_op1_ALU_5" BEL "reg_op1_ALU_6" BEL "reg_op1_ALU_7" BEL
+        "reg_op1_ALU_8" BEL "reg_op1_ALU_9" BEL "reg_op1_ALU_10" BEL
+        "reg_op1_ALU_11" BEL "reg_op1_ALU_12" BEL "reg_op1_ALU_13" BEL
+        "reg_op1_ALU_14" BEL "reg_op1_ALU_15" BEL "reg_op1_ALU_16" BEL
+        "reg_op1_ALU_17" BEL "reg_op1_ALU_18" BEL "reg_op1_ALU_19" BEL
+        "reg_op1_ALU_20" BEL "reg_op1_ALU_21" BEL "reg_op1_ALU_22" BEL
+        "reg_op1_ALU_23" BEL "reg_op1_ALU_24" BEL "reg_op1_ALU_25" BEL
+        "reg_op1_ALU_26" BEL "reg_op1_ALU_27" BEL "reg_op1_ALU_28" BEL
+        "reg_op1_ALU_29" BEL "reg_op1_ALU_30" BEL "reg_op1_ALU_31" BEL
+        "reg_op2_ALU_0" BEL "reg_op2_ALU_1" BEL "reg_op2_ALU_2" BEL
+        "reg_op2_ALU_3" BEL "reg_op2_ALU_4" BEL "reg_op2_ALU_5" BEL
+        "reg_op2_ALU_6" BEL "reg_op2_ALU_7" BEL "reg_op2_ALU_8" BEL
+        "reg_op2_ALU_9" BEL "reg_op2_ALU_10" BEL "reg_op2_ALU_11" BEL
+        "reg_op2_ALU_12" BEL "reg_op2_ALU_13" BEL "reg_op2_ALU_14" BEL
+        "reg_op2_ALU_15" BEL "reg_op2_ALU_16" BEL "reg_op2_ALU_17" BEL
+        "reg_op2_ALU_18" BEL "reg_op2_ALU_19" BEL "reg_op2_ALU_20" BEL
+        "reg_op2_ALU_21" BEL "reg_op2_ALU_22" BEL "reg_op2_ALU_23" BEL
+        "reg_op2_ALU_24" BEL "reg_op2_ALU_25" BEL "reg_op2_ALU_26" BEL
+        "reg_op2_ALU_27" BEL "reg_op2_ALU_28" BEL "reg_op2_ALU_29" BEL
+        "reg_op2_ALU_30" BEL "reg_op2_ALU_31" BEL "pc_id_2" BEL "pc_id_3" BEL
+        "pc_id_4" BEL "pc_id_5" BEL "pc_id_6" BEL "pc_id_7" BEL "pc_id_8" BEL
+        "pc_id_9" BEL "pc_id_10" BEL "pc_id_11" BEL "pc_id_12" BEL "pc_id_13"
+        BEL "pc_id_14" BEL "pc_id_15" BEL "pc_id_16" BEL "pc_id_17" BEL
+        "pc_id_18" BEL "pc_id_19" BEL "pc_id_20" BEL "pc_id_21" BEL "pc_id_22"
+        BEL "pc_id_23" BEL "pc_id_24" BEL "pc_id_25" BEL "pc_id_26" BEL
+        "pc_id_27" BEL "pc_id_28" BEL "pc_id_29" BEL "pc_id_30" BEL "pc_id_31"
+        BEL "pc_ALU_2" BEL "pc_ALU_3" BEL "pc_ALU_4" BEL "pc_ALU_5" BEL
+        "pc_ALU_6" BEL "pc_ALU_7" BEL "pc_ALU_8" BEL "pc_ALU_9" BEL
+        "pc_ALU_10" BEL "pc_ALU_11" BEL "pc_ALU_12" BEL "pc_ALU_13" BEL
+        "pc_ALU_14" BEL "pc_ALU_15" BEL "pc_ALU_16" BEL "pc_ALU_17" BEL
+        "pc_ALU_18" BEL "pc_ALU_19" BEL "pc_ALU_20" BEL "pc_ALU_21" BEL
+        "pc_ALU_22" BEL "pc_ALU_23" BEL "pc_ALU_24" BEL "pc_ALU_25" BEL
+        "pc_ALU_26" BEL "pc_ALU_27" BEL "pc_ALU_28" BEL "pc_ALU_29" BEL
+        "pc_ALU_30" BEL "pc_ALU_31" BEL "mem_op_ALU" BEL "branch_ALU" BEL
+        "R_or_I_ALU" BEL "mem_write_ALU" BEL "ALU_op_ALU_0" BEL "ALU_op_ALU_1"
+        BEL "ALU_op_ALU_2" BEL "ALU_op_ALU_3" BEL "reg_write_ALU" BEL
+        "reg_result_select_ALU_0" BEL "reg_result_select_ALU_1" BEL
+        "reg_dest_ALU_0" BEL "reg_dest_ALU_1" BEL "reg_dest_ALU_2" BEL
+        "reg_dest_ALU_3" BEL "reg_dest_ALU_4" BEL "pc_MEM_2" BEL "pc_MEM_3"
+        BEL "pc_MEM_4" BEL "pc_MEM_5" BEL "pc_MEM_6" BEL "pc_MEM_7" BEL
+        "pc_MEM_8" BEL "pc_MEM_9" BEL "pc_MEM_10" BEL "pc_MEM_11" BEL
+        "pc_MEM_12" BEL "pc_MEM_13" BEL "pc_MEM_14" BEL "pc_MEM_15" BEL
+        "pc_MEM_16" BEL "pc_MEM_17" BEL "pc_MEM_18" BEL "pc_MEM_19" BEL
+        "pc_MEM_20" BEL "pc_MEM_21" BEL "pc_MEM_22" BEL "pc_MEM_23" BEL
+        "pc_MEM_24" BEL "pc_MEM_25" BEL "pc_MEM_26" BEL "pc_MEM_27" BEL
+        "pc_MEM_28" BEL "pc_MEM_29" BEL "pc_MEM_30" BEL "pc_MEM_31" BEL
+        "reg_write_MEM" BEL "reg_result_select_MEM_0" BEL
+        "reg_result_select_MEM_1" BEL "ALU_out_MEM_0" BEL "ALU_out_MEM_1" BEL
+        "ALU_out_MEM_2" BEL "ALU_out_MEM_3" BEL "ALU_out_MEM_4" BEL
+        "ALU_out_MEM_5" BEL "ALU_out_MEM_6" BEL "ALU_out_MEM_7" BEL
+        "ALU_out_MEM_8" BEL "ALU_out_MEM_9" BEL "ALU_out_MEM_10" BEL
+        "ALU_out_MEM_11" BEL "ALU_out_MEM_12" BEL "ALU_out_MEM_13" BEL
+        "ALU_out_MEM_14" BEL "ALU_out_MEM_15" BEL "ALU_out_MEM_16" BEL
+        "ALU_out_MEM_17" BEL "ALU_out_MEM_18" BEL "ALU_out_MEM_19" BEL
+        "ALU_out_MEM_20" BEL "ALU_out_MEM_21" BEL "ALU_out_MEM_22" BEL
+        "ALU_out_MEM_23" BEL "ALU_out_MEM_24" BEL "ALU_out_MEM_25" BEL
+        "ALU_out_MEM_26" BEL "ALU_out_MEM_27" BEL "ALU_out_MEM_28" BEL
+        "ALU_out_MEM_29" BEL "ALU_out_MEM_30" BEL "ALU_out_MEM_31" BEL
+        "reg_dest_MEM_0" BEL "reg_dest_MEM_1" BEL "reg_dest_MEM_2" BEL
+        "reg_dest_MEM_3" BEL "reg_dest_MEM_4" BEL "probe_internal_0" BEL
+        "probe_internal_1" BEL "probe_internal_2" BEL "probe_internal_3" BEL
+        "probe_internal_4" BEL "probe_internal_5" BEL "probe_internal_6" BEL
+        "probe_internal_7" BEL "R_or_I_ALU_1" BEL "ALU_op_ALU_2_1" BEL
+        "ALU_op_ALU_0_1" BEL "imm_ext_ALU_16_1" BEL "ALU_op_ALU_2_2" BEL
+        "ALU_op_ALU_1_1" BEL "imm_ext_ALU_16_2" BEL "R_or_I_ALU_2" BEL
+        "clock_BUFGP/BUFG" BEL "Inst_register_bank/Mram_bank161/SP" BEL
+        "Inst_register_bank/Mram_bank161/DP" BEL
+        "Inst_register_bank/Mram_bank162/SP" BEL
+        "Inst_register_bank/Mram_bank162/DP" BEL
+        "Inst_register_bank/Mram_bank61/SP" BEL
+        "Inst_register_bank/Mram_bank61/DP" BEL
+        "Inst_register_bank/Mram_bank62/SP" BEL
+        "Inst_register_bank/Mram_bank62/DP" BEL
+        "Inst_register_bank/Mram_bank1_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank1_RAMA" BEL
+        "Inst_register_bank/Mram_bank1_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank1_RAMB" BEL
+        "Inst_register_bank/Mram_bank1_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank1_RAMC" BEL
+        "Inst_register_bank/Mram_bank1_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank1_RAMD" BEL
+        "Inst_register_bank/Mram_bank11_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank11_RAMA" BEL
+        "Inst_register_bank/Mram_bank11_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank11_RAMB" BEL
+        "Inst_register_bank/Mram_bank11_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank11_RAMC" BEL
+        "Inst_register_bank/Mram_bank11_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank11_RAMD" BEL
+        "Inst_register_bank/Mram_bank12_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank12_RAMA" BEL
+        "Inst_register_bank/Mram_bank12_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank12_RAMB" BEL
+        "Inst_register_bank/Mram_bank12_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank12_RAMC" BEL
+        "Inst_register_bank/Mram_bank12_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank12_RAMD" BEL
+        "Inst_register_bank/Mram_bank13_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank13_RAMA" BEL
+        "Inst_register_bank/Mram_bank13_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank13_RAMB" BEL
+        "Inst_register_bank/Mram_bank13_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank13_RAMC" BEL
+        "Inst_register_bank/Mram_bank13_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank13_RAMD" BEL
+        "Inst_register_bank/Mram_bank14_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank14_RAMA" BEL
+        "Inst_register_bank/Mram_bank14_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank14_RAMB" BEL
+        "Inst_register_bank/Mram_bank14_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank14_RAMC" BEL
+        "Inst_register_bank/Mram_bank14_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank14_RAMD" BEL
+        "Inst_register_bank/Mram_bank15_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank15_RAMA" BEL
+        "Inst_register_bank/Mram_bank15_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank15_RAMB" BEL
+        "Inst_register_bank/Mram_bank15_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank15_RAMC" BEL
+        "Inst_register_bank/Mram_bank15_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank15_RAMD" BEL
+        "Inst_register_bank/Mram_bank2_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank2_RAMA" BEL
+        "Inst_register_bank/Mram_bank2_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank2_RAMB" BEL
+        "Inst_register_bank/Mram_bank2_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank2_RAMC" BEL
+        "Inst_register_bank/Mram_bank2_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank2_RAMD" BEL
+        "Inst_register_bank/Mram_bank3_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank3_RAMA" BEL
+        "Inst_register_bank/Mram_bank3_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank3_RAMB" BEL
+        "Inst_register_bank/Mram_bank3_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank3_RAMC" BEL
+        "Inst_register_bank/Mram_bank3_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank3_RAMD" BEL
+        "Inst_register_bank/Mram_bank4_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank4_RAMA" BEL
+        "Inst_register_bank/Mram_bank4_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank4_RAMB" BEL
+        "Inst_register_bank/Mram_bank4_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank4_RAMC" BEL
+        "Inst_register_bank/Mram_bank4_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank4_RAMD" BEL
+        "Inst_register_bank/Mram_bank5_RAMA_D1" BEL
+        "Inst_register_bank/Mram_bank5_RAMA" BEL
+        "Inst_register_bank/Mram_bank5_RAMB_D1" BEL
+        "Inst_register_bank/Mram_bank5_RAMB" BEL
+        "Inst_register_bank/Mram_bank5_RAMC_D1" BEL
+        "Inst_register_bank/Mram_bank5_RAMC" BEL
+        "Inst_register_bank/Mram_bank5_RAMD_D1" BEL
+        "Inst_register_bank/Mram_bank5_RAMD" PIN
+        "instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>"
+        PIN
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>";
+TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+SCHEMATIC END;
+

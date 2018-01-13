@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "E:/MIPS_FOR_TEACHING/HDL_part/MIPS_PIPE.xst" -ofn "E:/MIPS_FOR_TEACHING/HDL_part/MIPS_PIPE.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MIPS_PIPE.ucf -p xc7z020-clg484-1 MIPS_PIPE.ngc MIPS_PIPE.ngd  
+map -intstyle ise -p xc7z020-clg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o MIPS_PIPE_map.ncd MIPS_PIPE.ngd MIPS_PIPE.pcf 
+par -w -intstyle ise -ol high -mt off MIPS_PIPE_map.ncd MIPS_PIPE.ncd MIPS_PIPE.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml MIPS_PIPE.twx MIPS_PIPE.ncd -o MIPS_PIPE.twr MIPS_PIPE.pcf -ucf MIPS_PIPE.ucf 
+bitgen -intstyle ise -f MIPS_PIPE.ut MIPS_PIPE.ncd 

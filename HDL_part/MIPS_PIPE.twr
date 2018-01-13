@@ -1,0 +1,885 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1
+-n 3 -fastpaths -xml MIPS_PIPE.twx MIPS_PIPE.ncd -o MIPS_PIPE.twr MIPS_PIPE.pcf
+-ucf MIPS_PIPE.ucf
+
+Design file:              MIPS_PIPE.ncd
+Physical constraint file: MIPS_PIPE.pcf
+Device,package,speed:     xc7z020,clg484,C,-1 (PRODUCTION 1.08 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 91018548 paths analyzed, 2282 endpoints analyzed, 39 failing endpoints
+ 39 timing errors detected. (39 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.754ns.
+--------------------------------------------------------------------------------
+
+Paths for end point instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAMB18_X4Y20.ADDRBWRADDR10), 776574 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.754ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.766ns (Levels of Logic = 15)
+  Clock Path Skew:      0.047ns (0.940 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.COUT          Tbyp                  0.117   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.COUT          Tbyp                  0.117   imm_ext_ALU<8>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.COUT          Tbyp                  0.117   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CMUX          Tcinc                 0.416   imm_ext_ALU<16>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<23>
+    SLICE_X56Y58.A5            net (fanout=2)        0.594   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<22>
+    SLICE_X56Y58.A             Tilo                  0.124   N62
+                                                             Inst_ALU/Mmux__n0049_A15
+    SLICE_X63Y57.CX            net (fanout=1)        0.617   Inst_ALU/Mmux__n0049_rs_A<22>
+    SLICE_X63Y57.COUT          Tcxcy                 0.398   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRBWRADDR10 net (fanout=2)        0.851   instr_address<7>
+    RAMB18_X4Y20.WRCLK         Trcck_ADDRB           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.766ns (4.950ns logic, 5.816ns route)
+                                                             (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.693ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.705ns (Levels of Logic = 15)
+  Clock Path Skew:      0.047ns (0.940 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.BMUX          Tcinb                 0.505   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X60Y53.C5            net (fanout=2)        0.432   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<5>
+    SLICE_X60Y53.C             Tilo                  0.124   ALU_in2<5>
+                                                             Inst_ALU/Mmux__n0049_rs_A<5>1
+    SLICE_X63Y53.BX            net (fanout=1)        0.532   Inst_ALU/Mmux__n0049_rs_A<5>
+    SLICE_X63Y53.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<7>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRBWRADDR10 net (fanout=2)        0.851   instr_address<7>
+    RAMB18_X4Y20.WRCLK         Trcck_ADDRB           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.705ns (5.136ns logic, 5.569ns route)
+                                                             (48.0% logic, 52.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.678ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.690ns (Levels of Logic = 15)
+  Clock Path Skew:      0.047ns (0.940 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.BMUX          Tcinb                 0.505   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X64Y55.A6            net (fanout=2)        0.466   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<9>
+    SLICE_X64Y55.A             Tilo                  0.124   imm_ext_ALU<11>
+                                                             Inst_ALU/Mmux__n0049_rs_A<9>1
+    SLICE_X63Y54.BX            net (fanout=1)        0.480   Inst_ALU/Mmux__n0049_rs_A<9>
+    SLICE_X63Y54.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRBWRADDR10 net (fanout=2)        0.851   instr_address<7>
+    RAMB18_X4Y20.WRCLK         Trcck_ADDRB           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.690ns (5.139ns logic, 5.551ns route)
+                                                             (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAMB18_X4Y20.ADDRARDADDR10), 776574 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.741ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.752ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.COUT          Tbyp                  0.117   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.COUT          Tbyp                  0.117   imm_ext_ALU<8>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.COUT          Tbyp                  0.117   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CMUX          Tcinc                 0.416   imm_ext_ALU<16>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<23>
+    SLICE_X56Y58.A5            net (fanout=2)        0.594   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<22>
+    SLICE_X56Y58.A             Tilo                  0.124   N62
+                                                             Inst_ALU/Mmux__n0049_A15
+    SLICE_X63Y57.CX            net (fanout=1)        0.617   Inst_ALU/Mmux__n0049_rs_A<22>
+    SLICE_X63Y57.COUT          Tcxcy                 0.398   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR10 net (fanout=2)        0.837   instr_address<7>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.752ns (4.950ns logic, 5.802ns route)
+                                                             (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.691ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.BMUX          Tcinb                 0.505   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X60Y53.C5            net (fanout=2)        0.432   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<5>
+    SLICE_X60Y53.C             Tilo                  0.124   ALU_in2<5>
+                                                             Inst_ALU/Mmux__n0049_rs_A<5>1
+    SLICE_X63Y53.BX            net (fanout=1)        0.532   Inst_ALU/Mmux__n0049_rs_A<5>
+    SLICE_X63Y53.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<7>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR10 net (fanout=2)        0.837   instr_address<7>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.691ns (5.136ns logic, 5.555ns route)
+                                                             (48.0% logic, 52.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.665ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.676ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.BMUX          Tcinb                 0.505   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X64Y55.A6            net (fanout=2)        0.466   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<9>
+    SLICE_X64Y55.A             Tilo                  0.124   imm_ext_ALU<11>
+                                                             Inst_ALU/Mmux__n0049_rs_A<9>1
+    SLICE_X63Y54.BX            net (fanout=1)        0.480   Inst_ALU/Mmux__n0049_rs_A<9>
+    SLICE_X63Y54.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.BMUX          Tcinb                 0.527   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR10 net (fanout=2)        0.837   instr_address<7>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.676ns (5.139ns logic, 5.537ns route)
+                                                             (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAMB18_X4Y20.ADDRARDADDR12), 1059006 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.726ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.737ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.COUT          Tbyp                  0.117   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X62Y55.COUT          Tbyp                  0.117   imm_ext_ALU<8>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<15>
+    SLICE_X62Y56.COUT          Tbyp                  0.117   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<19>
+    SLICE_X62Y57.CMUX          Tcinc                 0.416   imm_ext_ALU<16>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<23>
+    SLICE_X56Y58.A5            net (fanout=2)        0.594   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<22>
+    SLICE_X56Y58.A             Tilo                  0.124   N62
+                                                             Inst_ALU/Mmux__n0049_A15
+    SLICE_X63Y57.CX            net (fanout=1)        0.617   Inst_ALU/Mmux__n0049_rs_A<22>
+    SLICE_X63Y57.COUT          Tcxcy                 0.398   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.DMUX          Tcind                 0.511   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR12 net (fanout=2)        0.838   instr_address<9>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.737ns (4.934ns logic, 5.803ns route)
+                                                             (46.0% logic, 54.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.665ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.676ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.BMUX          Tcinb                 0.505   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X60Y53.C5            net (fanout=2)        0.432   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<5>
+    SLICE_X60Y53.C             Tilo                  0.124   ALU_in2<5>
+                                                             Inst_ALU/Mmux__n0049_rs_A<5>1
+    SLICE_X63Y53.BX            net (fanout=1)        0.532   Inst_ALU/Mmux__n0049_rs_A<5>
+    SLICE_X63Y53.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<7>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<7>
+    SLICE_X63Y54.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.DMUX          Tcind                 0.511   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR12 net (fanout=2)        0.838   instr_address<9>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.676ns (5.120ns logic, 5.556ns route)
+                                                             (48.0% logic, 52.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.650ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reg_op2_ALU_2 (FF)
+  Destination:          instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      10.661ns (Levels of Logic = 15)
+  Clock Path Skew:      0.046ns (0.939 - 0.893)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reg_op2_ALU_2 to instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y51.CQ            Tcko                  0.518   reg_op2_ALU<3>
+                                                             reg_op2_ALU_2
+    SLICE_X62Y52.C1            net (fanout=5)        1.051   reg_op2_ALU<2>
+    SLICE_X62Y52.COUT          Topcyc                0.504   imm_ext_ALU<1>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_lut<2>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<3>
+    SLICE_X62Y53.COUT          Tbyp                  0.117   imm_ext_ALU<5>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.CIN           net (fanout=1)        0.000   Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<7>
+    SLICE_X62Y54.BMUX          Tcinb                 0.505   imm_ext_ALU<4>
+                                                             Inst_ALU/Msub_input1[31]_input2[31]_sub_8_OUT<31:0>_cy<11>
+    SLICE_X64Y55.A6            net (fanout=2)        0.466   Inst_ALU/input1[31]_input2[31]_sub_8_OUT<9>
+    SLICE_X64Y55.A             Tilo                  0.124   imm_ext_ALU<11>
+                                                             Inst_ALU/Mmux__n0049_rs_A<9>1
+    SLICE_X63Y54.BX            net (fanout=1)        0.480   Inst_ALU/Mmux__n0049_rs_A<9>
+    SLICE_X63Y54.COUT          Tbxcy                 0.507   Inst_ALU/Mmux__n0049_rs_cy<11>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<11>
+    SLICE_X63Y55.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<15>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<15>
+    SLICE_X63Y56.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<19>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<19>
+    SLICE_X63Y57.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<23>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<23>
+    SLICE_X63Y58.COUT          Tbyp                  0.114   Inst_ALU/Mmux__n0049_rs_cy<27>
+                                                             Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CIN           net (fanout=1)        0.000   Inst_ALU/Mmux__n0049_rs_cy<27>
+    SLICE_X63Y59.CMUX          Tcinc                 0.417   Inst_ALU/_n0049<31>
+                                                             Inst_ALU/Mmux__n0049_rs_xor<31>
+    SLICE_X81Y55.A6            net (fanout=1)        0.762   Inst_ALU/_n0049<30>
+    SLICE_X81Y55.A             Tilo                  0.124   ALU_out_MEM<31>
+                                                             Inst_ALU/Mmux_output_buffer241
+    SLICE_X80Y54.C1            net (fanout=5)        0.835   ALU_out<30>
+    SLICE_X80Y54.C             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             branch_taken5_SW0_1
+    SLICE_X80Y54.D4            net (fanout=14)       0.483   branch_taken5_SW0
+    SLICE_X80Y54.D             Tilo                  0.124   Mmux_instr_address_rs_A<2>
+                                                             mux641222
+    SLICE_X84Y52.AX            net (fanout=1)        0.623   Mmux_instr_address_rs_A<2>
+    SLICE_X84Y52.COUT          Taxcy                 0.526   pc_current<5>
+                                                             Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.CIN           net (fanout=1)        0.000   Mmux_instr_address_rs_cy<5>
+    SLICE_X84Y53.DMUX          Tcind                 0.511   pc_current<9>
+                                                             Mmux_instr_address_rs_cy<9>
+    RAMB18_X4Y20.ADDRARDADDR12 net (fanout=2)        0.838   instr_address<9>
+    RAMB18_X4Y20.RDCLK         Trcck_ADDRA           0.566   instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+                                                             instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                           10.661ns (5.123ns logic, 5.538ns route)
+                                                             (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point probe_internal_6 (SLICE_X83Y49.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.002ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               instruction_in_24 (FF)
+  Destination:          probe_internal_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.273ns (Levels of Logic = 1)
+  Clock Path Skew:      0.271ns (0.856 - 0.585)
+  Source Clock:         clock_BUFGP rising at 10.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: instruction_in_24 to probe_internal_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y50.AQ      Tcko                  0.141   instruction_in<27>
+                                                       instruction_in_24
+    SLICE_X83Y49.C5      net (fanout=28)       0.179   instruction_in<24>
+    SLICE_X83Y49.CLK     Tah         (-Th)     0.047   probe_internal<7>
+                                                       Inst_register_bank/Mmux_data_out171
+                                                       probe_internal_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.273ns (0.094ns logic, 0.179ns route)
+                                                       (34.4% logic, 65.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point probe_internal_6 (SLICE_X83Y49.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.005ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               instruction_in_25 (FF)
+  Destination:          probe_internal_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.276ns (Levels of Logic = 1)
+  Clock Path Skew:      0.271ns (0.856 - 0.585)
+  Source Clock:         clock_BUFGP rising at 10.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: instruction_in_25 to probe_internal_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y50.BQ      Tcko                  0.141   instruction_in<27>
+                                                       instruction_in_25
+    SLICE_X83Y49.C6      net (fanout=28)       0.182   instruction_in<25>
+    SLICE_X83Y49.CLK     Tah         (-Th)     0.047   probe_internal<7>
+                                                       Inst_register_bank/Mmux_data_out171
+                                                       probe_internal_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.276ns (0.094ns logic, 0.182ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point probe_internal_7 (SLICE_X83Y49.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.008ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               instruction_in_25 (FF)
+  Destination:          probe_internal_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.279ns (Levels of Logic = 1)
+  Clock Path Skew:      0.271ns (0.856 - 0.585)
+  Source Clock:         clock_BUFGP rising at 10.000ns
+  Destination Clock:    clock_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: instruction_in_25 to probe_internal_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y50.BQ      Tcko                  0.141   instruction_in<27>
+                                                       instruction_in_25
+    SLICE_X83Y49.D6      net (fanout=28)       0.185   instruction_in<25>
+    SLICE_X83Y49.CLK     Tah         (-Th)     0.047   probe_internal<7>
+                                                       Inst_register_bank/Mmux_data_out181
+                                                       probe_internal_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.279ns (0.094ns logic, 0.185ns route)
+                                                       (33.7% logic, 66.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.424ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
+  Physical resource: instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram/CLKARDCLK
+  Logical resource: instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram/CLKARDCLK
+  Location pin: RAMB18_X4Y20.RDCLK
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.424ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
+  Physical resource: instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram/CLKBWRCLK
+  Logical resource: instr_mem/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.WIDE_PRIM18.ram/CLKBWRCLK
+  Location pin: RAMB18_X4Y20.WRCLK
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.424ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
+  Physical resource: data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Logical resource: data_memory/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Location pin: RAMB36_X4Y11.CLKARDCLKL
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |   10.754|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 39  Score: 11909  (Setup/Max: 11909, Hold: 0)
+
+Constraints cover 91018548 paths, 0 nets, and 3928 connections
+
+Design statistics:
+   Minimum period:  10.754ns{1}   (Maximum frequency:  92.989MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Jan 12 22:43:53 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 603 MB
+
+
+

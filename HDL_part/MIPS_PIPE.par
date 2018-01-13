@@ -1,0 +1,170 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+ALLENLU-PC::  Fri Jan 12 22:42:35 2018
+
+par -w -intstyle ise -ol high -mt off MIPS_PIPE_map.ncd MIPS_PIPE.ncd
+MIPS_PIPE.pcf 
+
+
+Constraints file: MIPS_PIPE.pcf.
+Loading device for application Rf_Device from file '7z020.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "MIPS_PIPE" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc7z020' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.08 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           1 out of 32      3%
+   Number of External IOB33s                11 out of 200     5%
+      Number of LOCed IOB33s                11 out of 11    100%
+
+   Number of RAMB18E1s                       1 out of 280     1%
+   Number of RAMB36E1s                       1 out of 140     1%
+   Number of Slices                        237 out of 13300   1%
+   Number of Slice Registers               305 out of 106400  1%
+      Number used as Flip Flops            305
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                    667 out of 53200   1%
+   Number of Slice LUT-Flip Flop pairs     733 out of 53200   1%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 22 secs 
+Finished initial Timing Analysis.  REAL time: 22 secs 
+
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank13_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank14_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank12_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Inst_register_bank/Mram_bank15_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 4301 unrouted;      REAL time: 23 secs 
+
+Phase  2  : 3861 unrouted;      REAL time: 24 secs 
+
+Phase  3  : 1133 unrouted;      REAL time: 25 secs 
+
+Phase  4  : 1205 unrouted; (Setup:15385, Hold:682, Component Switching Limit:0)     REAL time: 32 secs 
+
+Updating file: MIPS_PIPE.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:45303, Hold:652, Component Switching Limit:0)     REAL time: 39 secs 
+
+Phase  6  : 0 unrouted; (Setup:18889, Hold:652, Component Switching Limit:0)     REAL time: 45 secs 
+
+Phase  7  : 0 unrouted; (Setup:18889, Hold:652, Component Switching Limit:0)     REAL time: 45 secs 
+
+Phase  8  : 0 unrouted; (Setup:18889, Hold:652, Component Switching Limit:0)     REAL time: 45 secs 
+
+Phase  9  : 0 unrouted; (Setup:11909, Hold:0, Component Switching Limit:0)     REAL time: 46 secs 
+Total REAL time to Router completion: 46 secs 
+Total CPU time to Router completion: 46 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         clock_BUFGP | BUFGCTRL_X0Y0| No   |  131 |  0.129     |  1.827      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 11909 (Setup: 11909, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
+   are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_clock = PERIOD TIMEGRP "clock" 10 ns H | SETUP       |    -0.754ns|    10.754ns|      39|       11909
+  IGH 50%                                   | HOLD        |     0.002ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 10 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 49 secs 
+Total CPU time to PAR completion: 48 secs 
+
+Peak Memory Usage:  715 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 39 errors found.
+
+Number of error messages: 0
+Number of warning messages: 13
+Number of info messages: 0
+
+Writing design to file MIPS_PIPE.ncd
+
+
+
+PAR done!

@@ -1,0 +1,6 @@
+vhdl work "ipcore_dir/instruction_memory.vhd"
+vhdl work "ipcore_dir/data_mem.vhd"
+vhdl work "MIPS_package.vhd"
+vhdl work "register_bank.vhd"
+vhdl work "ALU.vhd"
+vhdl work "MIPS_PIPE.vhd"
